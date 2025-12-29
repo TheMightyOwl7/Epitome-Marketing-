@@ -91,28 +91,40 @@
       opacity: 0.5;
     }
   }
+
+  --animate-aurora: aurora 60s linear infinite;
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
 }
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 45 20% 95%;
-    --card: 0 0% 7%;
-    --card-foreground: 45 20% 95%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 45 20% 95%;
+    --background: 0 0% 100%;
+    --foreground: 45 20% 10%;
+    --card: 0 0% 96%;
+    --card-foreground: 45 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 45 20% 10%;
     --primary: 43 74% 49%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 43 30% 15%;
-    --secondary-foreground: 45 20% 90%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 43 50% 25%;
-    --accent-foreground: 45 20% 95%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 30% 90%;
+    --secondary-foreground: 45 20% 10%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 43 50% 90%;
+    --accent-foreground: 43 50% 10%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 43 20% 18%;
-    --input: 0 0% 15%;
+    --border: 43 10% 85%;
+    --input: 43 10% 90%;
     --ring: 43 74% 49%;
     --radius: 0.75rem;
 
@@ -122,13 +134,13 @@
     --gold-muted: 43 40% 20%;
 
     --gradient-gold: linear-gradient(135deg, hsl(43 80% 55%) 0%, hsl(43 74% 49%) 50%, hsl(38 70% 40%) 100%);
-    --gradient-gold-shimmer: linear-gradient(90deg, transparent 0%, hsl(43 80% 65% / 0.3) 50%, transparent 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 6%) 100%);
+    --gradient-gold-shimmer: linear-gradient(90deg, transparent 0%, hsl(43 80% 65% / 0.5) 50%, transparent 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 100%);
 
-    --shadow-gold: 0 4px 30px hsl(43 74% 49% / 0.15);
-    --shadow-gold-strong: 0 8px 40px hsl(43 74% 49% / 0.25);
-    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.5);
+    --shadow-gold: 0 4px 30px hsl(43 74% 49% / 0.2);
+    --shadow-gold-strong: 0 8px 40px hsl(43 74% 49% / 0.3);
+    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.1);
   }
 
   .dark {
@@ -151,6 +163,12 @@
     --border: 43 20% 18%;
     --input: 0 0% 15%;
     --ring: 43 74% 49%;
+
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 6%) 100%);
+    --shadow-gold: 0 4px 30px hsl(43 74% 49% / 0.15);
+    --shadow-gold-strong: 0 8px 40px hsl(43 74% 49% / 0.25);
+    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.5);
   }
 }
 

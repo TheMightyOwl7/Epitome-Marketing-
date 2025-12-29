@@ -1,3 +1,6 @@
+import { ExpandableCards } from "@/components/ui/expandable-cards";
+import { motion } from "motion/react";
+
 const stats = [
   {
     value: "320%",
@@ -27,7 +30,7 @@ const ResultsSection = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-card" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-      
+
       {/* Decorative lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -35,26 +38,47 @@ const ResultsSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-body font-semibold text-sm tracking-wider uppercase mb-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-primary font-body font-semibold text-sm tracking-wider uppercase mb-4"
+          >
             Proven Results
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          >
             Numbers That{" "}
             <span className="text-gradient-gold">Speak for Themselves</span>
-          </h2>
-          <p className="text-muted-foreground font-body text-lg">
-            We're obsessed with metrics that matter. Not impressions. Not clicks. 
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-muted-foreground font-body text-lg"
+          >
+            We're obsessed with metrics that matter. Not impressions. Not clicks.
             Revenue, ROAS, and profit margins.
-          </p>
+          </motion.p>
         </div>
 
         {/* Stats Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, index) => (
-            <div
+            <motion.div
               key={stat.label}
-              className="text-center p-8 rounded-2xl border border-border bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center p-8 rounded-2xl border border-border bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group"
             >
               <p className="font-display text-4xl md:text-5xl font-bold text-gradient-gold mb-2">
                 {stat.value}
@@ -65,9 +89,21 @@ const ResultsSection = () => {
               <p className="font-body text-sm text-muted-foreground">
                 {stat.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
+
+        {/* Mini Case Studies */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-16 sm:mt-24 w-full"
+        >
+          <ExpandableCards />
+        </motion.div>
+
       </div>
     </section>
   );

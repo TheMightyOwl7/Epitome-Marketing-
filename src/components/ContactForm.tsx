@@ -193,7 +193,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                             <FormItem>
                                 <FormLabel>Phone</FormLabel>
                                 <FormControl>
-                                    <Input type="tel" placeholder="+1 (555) 000-0000" {...field} />
+                                    <Input type="tel" placeholder="+27 72 123 4567"  {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>

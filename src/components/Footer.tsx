@@ -18,7 +18,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-muted-foreground font-body text-sm max-w-sm leading-relaxed mb-6">
-              Premium digital marketing for businesses that demand results. 
+              Premium digital marketing for businesses that demand results.
               We build revenue engines, not vanity metrics.
             </p>
             <div className="space-y-3">
@@ -31,7 +31,19 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-muted-foreground text-sm font-body">
                 <MapPin className="w-4 h-4" />
-                London, United Kingdom
+                Hillcrest, South Africa
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div className="flex items-center gap-4 mt-6">
+              <div className="px-3 py-1.5 rounded-lg bg-card border border-border text-xs font-semibold text-muted-foreground flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                Google Partner
+              </div>
+              <div className="px-3 py-1.5 rounded-lg bg-card border border-border text-xs font-semibold text-muted-foreground flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+                Meta Ads Certified
               </div>
             </div>
           </div>
