@@ -1,3 +1,5 @@
+"use client";
+
 import { ExpandableCards } from "@/components/ui/expandable-cards";
 import { motion } from "motion/react";
 
